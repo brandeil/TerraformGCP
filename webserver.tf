@@ -3,6 +3,7 @@ resource "google_compute_instance" "webserver" {
   machine_type            = "n1-standard-1"
   metadata_startup_script = "apt-get update && apt-get install -y nginx"
   zone                    = "us-east1-b"
+  tags                    = ["http-server"]
 
   network_interface = {
     network       = "default"
