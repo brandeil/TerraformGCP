@@ -6,7 +6,7 @@ resource "google_compute_instance" "webserver" {
   tags                    = ["http-server"]
 
   network_interface = {
-    network       = "default"
+    network       = "${var.network}"
     access_config = {}
   }
 

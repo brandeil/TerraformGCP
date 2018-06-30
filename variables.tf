@@ -1,7 +1,4 @@
-variable "region" {
-  default = "us-east1"
-}
+variable "region" {}
 
-variable "project" {
-    default="fluid-cosmos-208712"
-}
+variable "project" {}
+variable "network" {}
