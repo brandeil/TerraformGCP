@@ -16,3 +16,19 @@ resource "google_compute_instance" "webserver" {
     }
   }
 }
+
+output "zone" {
+  value = "${google_compute_instance.webserver.zone}"
+}
+
+output "machinetype" {
+  value = "${google_compute_instance.webserver.machine_type}"
+}
+
+output "id" {
+  value = "${google_compute_instance.webserver.instance_id}"
+}
+
+output "ip" {
+  value = "${google_compute_instance.webserver.network_interface.0.network_ip}"
+}
